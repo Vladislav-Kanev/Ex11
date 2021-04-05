@@ -1,5 +1,6 @@
-#ifndef _INCLUDE_TRAIN_H
-#define _INCLUDE_TRAIN_H
+// Copyright 2021
+#ifndef INCLUDE_TRAIN_H_
+#define INCLUDE_TRAIN_H_
 
 #include <iostream>
 
@@ -25,8 +26,8 @@ class Cage {
   Cage() : light(std::rand() % 2), next(nullptr), prev(nullptr) {}
   void on() { light = true; }
   void off() { light = false; }
-  void setState(bool state) { light = state; };
+  void setState(bool state) { light = state; }
   bool get() const { return light; }
 };
 
-#endif  // !_INCLUDE_TRAIN_H
+#endif  // !INCLUDE_TRAIN_H_

@@ -1,4 +1,5 @@
-#include "..\include\train.h"
+// Copyright 2021
+#include "../include/train.h"
 
 Train::Train() {
   first = nullptr;
