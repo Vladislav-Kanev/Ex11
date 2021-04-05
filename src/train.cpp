@@ -21,6 +21,8 @@ void Train::addCage(Cage* cg) {
   last = cg;
 }
 
+Cage* Train::getFirst() { return first; }
+
 unsigned Train::getLenght() {
   if (!first) return 0;
   bool state = first->get();

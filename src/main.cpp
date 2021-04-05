@@ -5,17 +5,16 @@
 #include "../include/train.h"
 
 int main() {
-  Train tr;
+  Train train;
   Cage* cg = new Cage;
-  tr.addCage(cg);
-  std::cout << tr.getLenght() << "\n";
+  train.addCage(cg);
+  std::cout << train.getLenght() << "\n";
 
-  for (size_t i = 0; i < 1000; ++i) {
+  for (size_t i = 0; i < std::rand() % 1000; ++i) {
     Cage* cage = new Cage();
-    tr.addCage(cage);
+    train.addCage(cage);
   }
-  tr.getState();
-  std::cout << tr.getLenght();
+  train.getState();
+  std::cout << train.getLenght();
   return 0;
 }
-

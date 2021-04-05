@@ -14,6 +14,7 @@ class Train {
  public:
   Train();
   void addCage(Cage*);
+  Cage* getFirst();
   unsigned getLenght();
   void getState();
 };
@@ -30,4 +31,4 @@ class Cage {
   bool get() const { return light; }
 };
 
-#endif  // !INCLUDE_TRAIN_H_
+#endif  // INCLUDE_TRAIN_H_
