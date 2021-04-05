@@ -6,9 +6,6 @@
 
 int main() {
   Train train;
-  Cage* cg = new Cage;
-  train.addCage(cg);
-  std::cout << train.getLenght() << "\n";
 
   for (size_t i = 0; i < std::rand() % 1000; ++i) {
     Cage* cage = new Cage();

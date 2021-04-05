@@ -27,7 +27,7 @@ unsigned Train::getLenght() {
   if (!first) return 0;
   bool state = first->get();
   Cage* pointer = first;
-  unsigned counter(0), lenght(0);
+  unsigned counter(1), lenght(0);
   while (true) {
     pointer = pointer->next;
     if (pointer->get() != state) {
@@ -36,10 +36,10 @@ unsigned Train::getLenght() {
     } else {
       lenght = counter;
       pointer->setState(!state);
-      for (size_t i = 0; i <= counter; ++i) {
+      for (size_t i = 0; i < counter; ++i) {
         pointer = pointer->prev;
       }
-      counter = 0;
+      counter = 1;
       if (pointer->get() != state) {
         break;
       }
@@ -51,7 +51,7 @@ unsigned Train::getLenght() {
 void Train::getState() {
   if (!first) return;
   Cage* pointer = first;
-  unsigned counter = 0;
+  unsigned counter = 1;
   std::cout << "Cage list:\n";
   while (pointer != last) {
     std::cout << "\t" << counter << ((pointer->get()) ? ": ON\n" : ": OFF\n");
