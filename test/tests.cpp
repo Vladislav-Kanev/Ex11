@@ -36,7 +36,6 @@ TEST(Train, test3) {
     Cage* cage = new Cage();
     tr.addCage(cage);
   }
-  ++expected;
   unsigned result = tr.getLenght();
   EXPECT_EQ(expected, result);
 }
