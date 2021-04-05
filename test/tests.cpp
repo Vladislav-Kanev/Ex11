@@ -5,7 +5,7 @@
 
 TEST(Train, test1) {
   Train tr;
-  Cage* cg1 = new Cage;
+  Cage* cage = new Cage;
   unsigned was = tr.getLenght();
   tr.addCage(cage);
   unsigned now = tr.getLenght();
